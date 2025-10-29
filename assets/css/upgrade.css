@@ -214,6 +214,33 @@ html, body {
   }
 }
 
+/* Background video styling */
+.hero-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Keep video behind content */
+}
+
+/* Ensure hero content stays visible */
+#hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Optional overlay for readability */
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3); /* Adjust transparency if needed */
+  z-index: 0;
+}
+
+
 /* About section style */
 /* Reset helpers (ensure included once in site) */
 * { box-sizing: border-box; }
@@ -405,6 +432,18 @@ img { max-width: 100%; display: block; }
   .about-left h2{ font-size: 1.75rem; }
   .about-left .lead{ font-size: 1.06rem; max-width: 70ch; }
 }
+/* Fix: make About title and description stack vertically */
+#about .container.text-center {
+  display: block !important;
+  text-align: center !important;
+}
+
+#about p {
+  font-size: 1.2rem; /* You can increase to 1.2rem if you want it larger */
+  line-height: 1.7;
+}
+
+
 
 /* service section style */
 /* ===== Services Section (Mobile-first) ===== */
