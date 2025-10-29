@@ -82,326 +82,279 @@
   </div>
 </header>
 
-  <!--hero-->
-  <!-- Hero Section -->
-<section id="hero" class="hero-section" style="background-color: #fff; padding: 100px 0;">
-  <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between" data-aos="fade-up">
+ 
+<!-- Hero Section -->
+<section id="hero" class="hero-section position-relative text-white d-flex align-items-center justify-content-center">
 
-    <!-- Hero Text -->
-    <div class="hero-text text-center text-lg-start mb-5 mb-lg-0" style="max-width: 540px;">
-      <h1 class="fw-bold mb-3" style="font-size: 2.7rem; color: #222;">
+  <!-- ✅ Background Video -->
+  <video class="hero-bg-video" autoplay muted loop playsinline>
+    <source src="assets/video/hero-bg.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Optional Background Image (Fallback for browsers that block video autoplay) -->
+  <div class="hero-bg" style="background-image: url('assets/img/heroes/heroes-1.jpg');"></div>
+
+  <!-- Overlay -->
+  <div class="hero-overlay"></div>
+
+  <!-- Content -->
+  <div class="container position-relative text-center text-lg-start" data-aos="fade-up" style="z-index: 2;">
+    <div class="col-lg-8 mx-auto mx-lg-0">
+      <h1 class="fw-bold mb-3" style="font-size: 2.7rem; color: #fff;">
         Build a <span style="color: #0d6efd;">Modern Digital Presence</span> That Gets Results
       </h1>
-      <p class="text-muted mb-4" style="font-size: 1.05rem;">
-        At Visibyl, we design websites, integrate AI tools, and boost your online visibility - helping your business grow with smart, modern solutions.
+      <p class="lead text-light mb-4" style="max-width: 550px;">
+        At Visibyl, we design websites, integrate AI tools, and boost your online visibility — helping your business grow with smart, modern solutions.
       </p>
-      <div>
-        <a href="#services" class="btn btn-primary btn-lg me-2 mb-2" style="padding: 12px 28px; border-radius: 8px;">Explore Services</a>
-        <a href="#contact" class="btn btn-outline-primary btn-lg mb-2" style="padding: 12px 28px; border-radius: 8px;">Get Started</a>
+      <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
+        <a href="#services" class="btn btn-primary btn-lg px-4 py-3" style="border-radius: 10px;">Explore Services</a>
+        <a href="#contact" class="btn btn-outline-light btn-lg px-4 py-3" style="border-radius: 10px;">Get Started</a>
       </div>
     </div>
-
-    <!-- Hero Image -->
-    <div class="hero-image" data-aos="zoom-in" data-aos-delay="150">
-      <img src="assets/img/heroes/heroes-1.jpg" alt="Visibyl digital solutions" class="img-fluid" style="max-width: 550px; border-radius: 12px;">
-    </div>
-
   </div>
 </section>
 
 <!-- Hero Section CSS -->
 <style>
+  .hero-section {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Background Video */
+  .hero-bg-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  /* Fallback Image */
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+
+  /* Overlay for readability */
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+  }
+
+  /* Buttons hover */
+  .btn-primary:hover {
+    background-color: #0b5ed7 !important;
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+  }
+
+  .btn-outline-light:hover {
+    background-color: #0d6efd !important;
+    border-color: #0d6efd !important;
+    color: #fff !important;
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+  }
+
+  /* Mobile First */
   @media (max-width: 992px) {
     #hero {
       text-align: center;
-      padding: 60px 20px;
+      height: auto;
+      padding: 100px 20px;
     }
+
     #hero h1 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       line-height: 1.3;
     }
+
     #hero p {
       font-size: 1rem;
+      line-height: 1.6;
     }
-    #hero img {
-      max-width: 100%;
-    }
-  }
-  #hero .btn-primary:hover {
-    background-color: #0b5ed7 !important;
-    transform: translateY(-3px);
-    transition: all 0.3s ease-in-out;
-  }
-  #hero .btn-outline-primary:hover {
-    background-color: #0d6efd !important;
-    color: #fff !important;
-    transform: translateY(-3px);
-    transition: all 0.3s ease-in-out;
   }
 </style>
-<!-- /Hero Section -->
 
 
 
-<!--About-->
+
+
+<!-- ================= About Section ================= -->
+<section id="about" class="about section position-relative overflow-hidden">
+
+  <!-- Background Decoration -->
+  <div class="position-absolute top-0 start-0 w-100 h-100"
+       style="background: radial-gradient(circle at top left, #e7f0ff, #ffffff 70%); z-index:-1;"></div>
+
+  <!-- Section Title -->
+  <div class="container text-center mb-5" data-aos="fade-up">
   
-<!-- About Section -->
-<section id="about" class="about section py-5" style="background-color:#fff;">
+    <h2 class="fw-bold mb-3" style="color:#0f172a;">About <span style="color:#0d6efd;">Visibyl</span></h2>
+    <p class="text-muted mx-auto" style="max-width:750px;">
+      Visibyl is a digital solutions company helping businesses establish a strong online presence through affordable,
+      modern, and AI-powered websites. We merge creativity, technology, and strategy to make brands more visible,
+      efficient, and profitable.
+    </p>
+  </div>
 
-<!-- Section Title -->
-<div class="container text-center mb-5" data-aos="fade-up">
-
-  <!-- Header -->
-  <h2 class="fw-bold mb-3 about-title">
-    About <span class="highlight">Visibyl</span>
-  </h2>
-
-  <!-- Description -->
-  <p class="about-desc mx-auto">
-    Visibyl is a digital solutions company helping businesses establish a strong online presence 
-    through affordable, modern, and AI-powered websites. We combine website development, 
-    artificial intelligence integration, and digital marketing to give businesses 
-    <strong>visibility, efficiency, and growth</strong>.
-  </p>
-
-</div>
-
-<!-- Custom Styles -->
-<style>
-  .about-title {
-    font-size: 2.6rem;
-    color: #0f172a;
-    letter-spacing: -0.5px;
-  }
-  .highlight {
-    color: #0d6efd;
-    position: relative;
-  }
-  .highlight::after {
-    content: '';
-    position: absolute;
-    bottom: -6px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, #0d6efd, #38bdf8);
-    border-radius: 2px;
-    animation: slideIn 1.2s ease-out;
-  }
-  .about-desc {
-    max-width: 750px;
-    font-size: 1.1rem;
-    color: #4b5563;
-    line-height: 1.8;
-  }
-  @keyframes slideIn {
-    from { width: 0; }
-    to { width: 100%; }
-  }
-  @media (max-width: 768px) {
-    .about-title {
-      font-size: 2rem;
-    }
-    .about-desc {
-      font-size: 1rem;
-      padding: 0 15px;
-    }
-  }
-</style>
-
-  <!-- End Section Title -->
-
+  <!-- Main Content -->
   <div class="container" data-aos="fade-up" data-aos-delay="100">
     <div class="row align-items-center g-5">
 
-      <!-- Left Content -->
-      <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
-        <h3 class="fw-bold mb-3" style="font-size:1.9rem; color:#0d6efd;">
-          Using Modern Technologies To Transform Businesses
-        </h3>
-
-        <p class="lead text-dark mb-3" style="line-height:1.7;">
-          At Visibyl, we prioritize our clients’ goals while maintaining a professional, creative approach that delivers measurable results.
-        </p>
-
-        <p class="text-muted mb-2">
-          We take time to understand your business, design solutions that fit your vision, and provide results that move your brand forward.
-        </p>
-
-        <p class="text-muted mb-4">
-          From consultation to launch, we’ve made every step seamless, transparent, and efficient for you.
-        </p>
-
-        <!-- Counters -->
-        <div class="d-flex flex-wrap justify-content-start gap-5 mb-4 text-center">
-          <div>
-            <h3 class="fw-bold text-primary count" data-target="75">0</h3>
-            <p class="small text-muted mb-0">Minimum Cost ($)</p>
-          </div>
-          <div>
-            <h3 class="fw-bold text-primary count" data-target="3">0</h3>
-            <p class="small text-muted mb-0">Minimum Delivery Days</p>
-          </div>
-          <div>
-            <h3 class="fw-bold text-primary count" data-target="7">0</h3>
-            <p class="small text-muted mb-0">Maximum Delivery Days</p>
-          </div>
-        </div>
-
-        <!-- CTA -->
-        <a href="#contact" class="btn btn-primary btn-lg" style="border-radius:10px; padding:12px 28px;">
-          Need Consultation?
-        </a>
-      </div>
-
-      <!-- Right Image -->
-      <div class="col-lg-6 text-center" data-aos="fade-left" data-aos-delay="300">
+      <!-- Image Side -->
+      <div class="col-lg-6 order-lg-2 text-center" data-aos="fade-left" data-aos-delay="200">
         <div class="position-relative d-inline-block">
-          <img src="assets/img/about/about-1.jpg" alt="About Visibyl" class="img-fluid rounded-4 shadow-lg">
-          <div class="position-absolute bg-white rounded-4 shadow-sm px-3 py-2 d-flex align-items-center gap-2"
-               style="bottom:-20px; left:50%; transform:translateX(-50%); border-left:5px solid #0d6efd;">
-            <i class="bi bi-shop-window text-primary fs-5"></i>
+          <img src="assets/img/about/about-1.jpg" alt="About Visibyl" class="img-fluid rounded-4 shadow-lg" style="border:5px solid #f8f9fa;">
+          <div class="floating-info bg-white shadow-lg rounded-4 p-3 d-flex align-items-center gap-3"
+               style="position:absolute; bottom:-25px; left:50%; transform:translateX(-50%); border-left:5px solid #0d6efd;">
+            <i class="bi bi-shop-window text-primary fs-3"></i>
             <div class="text-start">
-              <h6 class="fw-bold mb-1" style="color:#0f172a;">Target Market</h6>
-              <p class="small mb-0 text-muted">SMEs, Startups, Local & International Businesses</p>
+              <h6 class="fw-bold mb-1 text-dark">Target Market</h6>
+              <p class="small text-muted mb-0">SMEs, Startups, Local & International Businesses</p>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- Text Side -->
+      <div class="col-lg-6 order-lg-1" data-aos="fade-right" data-aos-delay="300">
+        <h3 class="fw-bold mb-3" style="color:#0d6efd;">Transforming Businesses with Modern Technologies</h3>
+        <p class="lead text-dark mb-3" style="line-height:1.7;">
+          At Visibyl, we prioritize your business goals while combining innovation and precision to deliver results that stand out.
+        </p>
+        <p class="text-muted mb-4">
+          We understand your vision, strategize solutions, and execute with creativity and professionalism — ensuring each step adds value to your brand.
+        </p>
+
+        <!-- Animated Counters -->
+        <div class="d-flex flex-wrap gap-4 mb-4 text-center">
+          <div class="flex-fill">
+            <h3 class="fw-bold text-primary count" data-target="75">0</h3>
+            <p class="small text-muted">Minimum Cost ($)</p>
+          </div>
+          <div class="flex-fill">
+            <h3 class="fw-bold text-primary count" data-target="3">0</h3>
+            <p class="small text-muted">Minimum Delivery Days</p>
+          </div>
+          <div class="flex-fill">
+            <h3 class="fw-bold text-primary count" data-target="7">0</h3>
+            <p class="small text-muted">Maximum Delivery Days</p>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <a href="#contact" class="btn btn-primary btn-lg shadow-sm" style="border-radius:12px; padding:12px 30px;">
+          Need Consultation?
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Styles -->
+<!-- ================= Styles ================= -->
 <style>
+  #about {
+    padding: 100px 0;
+  }
+
+  #about .floating-info {
+    animation: floatCard 3s ease-in-out infinite alternate;
+  }
+
+  @keyframes floatCard {
+    from { transform: translate(-50%, 0); }
+    to { transform: translate(-50%, -8px); }
+  }
+
   #about .count {
-    font-size: 2rem;
+    font-size: 2.3rem;
     line-height: 1;
   }
+
   #about .btn-primary:hover {
     background-color: #0b5ed7 !important;
     transform: translateY(-3px);
     transition: all 0.3s ease-in-out;
   }
+
   @media (max-width: 991px) {
     #about {
       text-align: center;
+      padding: 70px 0;
     }
-    #about img {
-      max-width: 100%;
-      margin-top: 30px;
+    #about .floating-info {
+      position: relative;
+      transform: none;
+      bottom: 0;
+      margin-top: 15px;
     }
     #about .count {
       font-size: 1.8rem;
     }
   }
+  
+  /* Fix overlap between Hero and About */
+.hero-section {
+  position: relative;
+}
+
+#about {
+  margin-top: 80px;
+}
+
+@media (max-width: 991px) {
+  #about {
+    margin-top: 60px;
+  }
+}
+
 </style>
 
+<!-- ================= Counter Script ================= -->
+<script>
+  const counters = document.querySelectorAll('.count');
+  const speed = 150;
 
+  const startCounting = () => {
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / speed;
 
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCount, 20);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      updateCount();
+    });
+  };
 
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        startCounting();
+        observer.disconnect();
+      }
+    });
+  });
 
+  observer.observe(document.querySelector('#about'));
+</script>
 
-
-
-
-
-   <!-- Services Section (Modern, Mobile-first) -->
-<section id="services" class="services-section" aria-labelledby="services-title">
-  <div class="wrap">
-    <header class="services-header" data-section-title>
-      <span class="eyebrow">Services</span>
-      <h2 id="services-title">What Visibyl Offers</h2>
-      <p class="intro">Feasible digital solutions to transform your business: websites, AI integrations, marketing packages and ongoing subscriptions tailored for growth.</p>
-    </header>
-
-    <div class="services-grid" role="list">
-      <!-- Card 1 -->
-      <article class="service-card" role="listitem" aria-labelledby="svc-1-title">
-        <div class="svc-icon" aria-hidden="true">
-          <!-- laptop SVG -->
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <rect x="2" y="5" width="20" height="12" rx="1.5" stroke="currentColor" stroke-width="1.25"/>
-            <path d="M2 19h20" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="svc-body">
-          <h3 id="svc-1-title">Website Development</h3>
-          <p class="svc-desc">Professional responsive websites - landing pages to full sites. Clean UX, fast performance and CMS-ready. <strong>From $75</strong>.</p>
-        </div>
-        <a class="svc-cta" href="#contact" aria-label="Contact about Website Development">Get Quote</a>
-      </article>
-
-      <!-- Card 2 -->
-      <article class="service-card" role="listitem" aria-labelledby="svc-2-title">
-        <div class="svc-icon" aria-hidden="true">
-          <!-- robot SVG -->
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <rect x="6" y="7" width="12" height="8" rx="2" stroke="currentColor" stroke-width="1.25"/>
-            <path d="M9 15v1a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-1" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
-            <circle cx="9.5" cy="11" r="0.6" fill="currentColor"/>
-            <circle cx="14.5" cy="11" r="0.6" fill="currentColor"/>
-          </svg>
-        </div>
-        <div class="svc-body">
-          <h3 id="svc-2-title">AI Integration</h3>
-          <p class="svc-desc">Chatbots, automations and smart workflows for support and lead generation. Seamless API integrations. <strong>$120+</strong>.</p>
-        </div>
-        <a class="svc-cta" href="#contact" aria-label="Contact about AI Integration">Talk AI</a>
-      </article>
-
-      <!-- New Card: Starter Package -->
-      <article class="service-card highlight" role="listitem" aria-labelledby="svc-2a-title">
-        <div class="svc-icon" aria-hidden="true">
-          <!-- briefcase SVG -->
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <rect x="3" y="7" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.25"/>
-            <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="svc-body">
-          <h3 id="svc-2a-title">Starter Package</h3>
-          <p class="svc-desc">This package is designed to help clients register their business, get a professional website, logo, business email, and online visibility - all for just <strong>$150</strong>.</p>
-        </div>
-        <a class="svc-cta" href="#contact" aria-label="Contact about Starter Package">Get Started</a>
-      </article>
-
-      <!-- Card 3 -->
-      <article class="service-card" role="listitem" aria-labelledby="svc-3-title">
-        <div class="svc-icon" aria-hidden="true">
-          <!-- graph SVG -->
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M3 17h18" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
-            <path d="M7 13l3-4 4 6 4-9 2 4" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <div class="svc-body">
-          <h3 id="svc-3-title">Premium Package</h3>
-          <p class="svc-desc">AI + creative assets + one-month ad management — for growth-focused campaigns. <strong>$200–$300</strong>.</p>
-        </div>
-        <a class="svc-cta" href="#contact" aria-label="Contact about Premium Package">Learn More</a>
-      </article>
-
-      <!-- Card 4 -->
-      <article class="service-card" role="listitem" aria-labelledby="svc-4-title">
-        <div class="svc-icon" aria-hidden="true">
-          <!-- subscription SVG -->
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.25"/>
-            <path d="M7 9v6" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
-            <path d="M12 9v6" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="svc-body">
-          <h3 id="svc-4-title">Subscription Services</h3>
-          <p class="svc-desc">Ongoing maintenance and AI tool subscriptions, updates and monitoring. <strong>$39/month</strong>.</p>
-        </div>
-        <a class="svc-cta" href="#contact" aria-label="Contact about Subscriptions">Subscribe</a>
-      </article>
-    </div>
-  </div>
-</section>
 
 
 
@@ -502,16 +455,16 @@
     <!-- Contact Section -->
 <section id="contact" class="contact section">
   <div class="container section-title" data-aos="fade-up">
-    
     <h2>Get In Touch</h2>
   </div>
 
   <div class="container contact-grid">
+    <!-- Contact Info -->
     <div class="contact-info">
       <div class="info-card">
         <i class="bi bi-envelope-open"></i>
         <h4>Email Us</h4>
-        <p><a href="mailto:contact@visibyl.com">contact@visibyl.com</a></p>
+        <p><a href="mailto:contact@visibyl.com">support@visibyl.com</a></p>
       </div>
 
       <div class="info-card">
@@ -520,6 +473,13 @@
         <p><a href="tel:+2349055977663">+234 905 597 7663</a></p>
       </div>
 
+      <!-- WhatsApp Contact (Clickable Card) -->
+      <a href="https://wa.me/2349055977663" target="_blank" class="info-card whatsapp-card" aria-label="Chat on WhatsApp">
+        <i class="bi bi-whatsapp text-success"></i>
+        <h4>Chat on WhatsApp</h4>
+        <p>Start a quick chat with our team</p>
+      </a>
+
       <div class="info-card">
         <i class="bi bi-geo-alt"></i>
         <h4>Location</h4>
@@ -527,6 +487,7 @@
       </div>
     </div>
 
+    <!-- Contact Form -->
     <div class="contact-form">
       <h3>Send Us a Message</h3>
       <form>
@@ -550,10 +511,58 @@
           Send Message <i class="bi bi-arrow-right"></i>
         </button>
       </form>
+	  
     </div>
   </div>
+
+  
 </section>
 <!-- /Contact Section -->
+
+<!-- Custom CSS -->
+<style>
+  .whatsapp-card {
+    display: block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  .whatsapp-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.25);
+  }
+  .whatsapp-card h4, 
+  .whatsapp-card p {
+    color: #1e1e1e;
+  }
+
+  /* Floating WhatsApp Button */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    padding: 15px 17px;
+    font-size: 1.6rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+  .whatsapp-float:hover {
+    background-color: #1ebd5a;
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    .whatsapp-float {
+      bottom: 20px;
+      right: 20px;
+      padding: 12px 14px;
+      font-size: 1.4rem;
+    }
+  }
+</style>
 
 
   </main>
