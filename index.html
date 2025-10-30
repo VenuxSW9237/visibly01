@@ -83,17 +83,19 @@
 </header>
 
  
+<!--hero-->
+
 <!-- Hero Section -->
 <section id="hero" class="hero-section position-relative text-white d-flex align-items-center justify-content-center">
 
-  <!-- ✅ Background Video -->
-  <video class="hero-bg-video" autoplay muted loop playsinline>
-    <source src="assets/video/hero-bg.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-
-  <!-- Optional Background Image (Fallback for browsers that block video autoplay) -->
-  <div class="hero-bg" style="background-image: url('assets/img/heroes/heroes-1.jpg');"></div>
+  <!-- ✅ Background Slideshow -->
+  <div class="hero-slideshow">
+    <div class="slide" style="background-image: url('assets/img/heroes/hero1.jpg');"></div>
+    <div class="slide" style="background-image: url('assets/img/heroes/hero2.jpg');"></div>
+    <div class="slide" style="background-image: url('assets/img/heroes/hero3.jpg');"></div>
+    <div class="slide" style="background-image: url('assets/img/heroes/hero4.jpg');"></div>
+    <div class="slide" style="background-image: url('assets/img/heroes/hero5.jpg');"></div>
+  </div>
 
   <!-- Overlay -->
   <div class="hero-overlay"></div>
@@ -101,7 +103,7 @@
   <!-- Content -->
   <div class="container position-relative text-center text-lg-start" data-aos="fade-up" style="z-index: 2;">
     <div class="col-lg-8 mx-auto mx-lg-0">
-      <h1 class="fw-bold mb-3" style="font-size: 2.7rem; color: #fff;">
+      <h1 class="fw-bold mb-3" style="font-size: 3.1rem; color: #fff;">
         Build a <span style="color: #0d6efd;">Modern Digital Presence</span> That Gets Results
       </h1>
       <p class="lead text-light mb-4" style="max-width: 550px;">
@@ -117,40 +119,55 @@
 
 <!-- Hero Section CSS -->
 <style>
+  /* Main Hero Layout */
   .hero-section {
     height: 100vh;
     position: relative;
     overflow: hidden;
   }
 
-  /* Background Video */
-  .hero-bg-video {
+  /* ====== SLIDESHOW BACKGROUND ====== */
+  .hero-slideshow {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
     z-index: 0;
+    overflow: hidden;
   }
 
-  /* Fallback Image */
-  .hero-bg {
+  .slide {
     position: absolute;
     inset: 0;
     background-size: cover;
     background-position: center;
-    z-index: -1;
+    opacity: 0;
+    animation: fadeSlide 18s infinite;
   }
 
-  /* Overlay for readability */
+  /* Slide sequence timing */
+  .slide:nth-child(1) { animation-delay: 0s; }
+  .slide:nth-child(2) { animation-delay: 6s; }
+  .slide:nth-child(3) { animation-delay: 12s; }
+
+  /* Smooth fade + zoom animation */
+  @keyframes fadeSlide {
+    0% { opacity: 0; transform: scale(1.05); }
+    8% { opacity: 1; transform: scale(1); }
+    33% { opacity: 1; transform: scale(1); }
+    41% { opacity: 0; transform: scale(1.05); }
+    100% { opacity: 0; }
+  }
+
+  /* Dark overlay */
   .hero-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.55);
+    background: rgba(0, 0, 0, 0.65);
     z-index: 1;
   }
 
-  /* Buttons hover */
+  /* Button hover effects */
   .btn-primary:hover {
     background-color: #0b5ed7 !important;
     transform: translateY(-3px);
@@ -165,7 +182,7 @@
     transition: all 0.3s ease;
   }
 
-  /* Mobile First */
+  /* ====== MOBILE FIRST ====== */
   @media (max-width: 992px) {
     #hero {
       text-align: center;
@@ -184,7 +201,6 @@
     }
   }
 </style>
-
 
 
 
